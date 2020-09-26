@@ -3,7 +3,8 @@ Hydra Password Cracking Cheetsheet
 
 The following table uses the $ip variable which can be set with the following command:  
 
-`export ip 10.10.10.1`
+`export ip=10.10.10.1`
+`echo $ip`
 
 
 | Command | Description |
